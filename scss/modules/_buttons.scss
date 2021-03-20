@@ -1,0 +1,146 @@
+// ----------------------------------------------------------------------------
+// BUTTONS
+// ----------------------------------------------------------------------------
+%btn {
+    width: fit-content;
+    display: inline-block;
+    padding: rem(16) rem(30);
+    text-align: center;
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: rem(50);
+    cursor: pointer;
+    font-size: rem(16);
+    font-weight: 700;
+    letter-spacing: 4.6px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: inset 0 0 rem(10) rem(5) rgba(0, 0, 0, 0.1) !important;
+    transition: all .3s;
+}
+
+%btn--main {
+    color: $white;
+    border: transparent;
+    background-color: $btn;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+        background-color: $white;
+        color: $primary-color;
+    }
+}
+
+%btn--border {
+    border: 1px solid $white;
+    background-color: transparent;
+    color: $white;
+
+    &:before {
+        background: $white;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+
+%btn--border--inv {
+    background: transparent;
+    color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary-color;
+        background-color: $primary-color !important;
+        color: $white;
+    }
+}
+
+%btn--inv {
+
+    background-color: transparent;
+    border-color: transparent;
+    color: $primary-color;
+
+    &:before {
+        background: $primary-color;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary-color;
+        color: white;
+    }
+}
+
+%btn--border--black {
+    background: $grey-darker;
+    color: $white;
+    border-color: $grey-darker;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary-color;
+        background-color: $primary-color !important;
+        color: $white;
+    }
+}
+
+%btn--main_inverse {
+    color: $white;
+    background-color: $primary-color !important;
+    border-color: $primary-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        border-color: $btn-dark-color !important;
+        background-color: $btn-dark-color !important;
+    }
+}
+
+
+button.btn,
+a.btn,
+input.btn {
+    @extend %btn;
+
+    &--main {
+        @extend %btn--main;
+    }
+
+    &--border {
+        @extend %btn--border;
+    }
+
+    &--border--inv {
+        @extend %btn--border--inv;
+    }
+
+    &--border--black {
+        @extend %btn--border--black;
+    }
+
+    &--inv {
+        @extend %btn--inv;
+    }
+
+    &--main_inverse {
+        @extend %btn--main_inverse;
+    }
+}

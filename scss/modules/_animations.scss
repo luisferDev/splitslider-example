@@ -1,0 +1,149 @@
+// --------------------------------------------------------------------------------
+// Animaciones específicas
+// --------------------------------------------------------------------------------
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// ANIMACIÓN SLIDE PHOTO 01
+//----------------------------------------------------------------
+.shrink {
+    animation: shrink 3s ease-out;
+}
+
+@keyframes shrink {
+    0% {
+        background-size: 200%;
+        opacity: 0;
+    }
+
+    40% {
+        background-size: 150%;
+        opacity: 0;
+    }
+
+    50% {
+        background-size: 125%;
+        opacity: 1;
+    }
+
+    100% {
+        background-size: 100%;
+        opacity: 1;
+    }
+}
+
+
+// NAVIGATION ARROWS
+// --------------------------
+.current {
+    .c-up {
+        opacity: 0;
+        animation: up .2s ease-out 1.1s forwards;
+    }
+
+    .t-up {
+        opacity: 0;
+        animation: up .3s ease-out .8s forwards;
+    }
+
+    .s-up {
+        opacity: 0;
+        animation: up .2s ease-out .7s forwards;
+    }
+
+    .b-up {
+        opacity: 0;
+        animation: up .2s ease-out 1.2s forwards;
+    }
+
+    .l-lf {
+        opacity: 0;
+        animation: line .4s ease-out 1s forwards;
+    }
+}
+
+@keyframes copyup {
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes up {
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes up2 {
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(40px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes line {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
